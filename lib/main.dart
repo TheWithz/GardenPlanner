@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:garden_planner/garden_planner_icons_icons.dart';
 
 void main() {
   runApp(MyApp());
@@ -104,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Tab(icon: Icon(GardenPlannerIcons.growveg)),
           ],
         ),
       ),

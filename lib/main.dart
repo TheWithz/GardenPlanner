@@ -29,20 +29,17 @@ Icon getMoonPhase(String phase) {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.green,
-        backgroundColor: Colors.black54,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Tab(icon: Icon(GardenPlannerIcons.growveg)),
               SizedBox(width: 80),
@@ -50,26 +47,141 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              ListTile(),
+              ListTile(),
+              ListTile(),
+              ListTile(),
+              ListTile(),
+              ListTile(),
+            ],
+          ),
+        ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+          child: ListView(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Center(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.rectangle,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        FlatButton(
+                          child: Icon(GardenPlannerIcons.previous),
+                          color: Colors.green,
+                          onPressed: () {},
+                        ),
+                        Padding(
+                          child: Text(
+                            "September 5th to 11th",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            top: 10,
+                            right: 10,
+                            bottom: 10,
+                          ),
+                        ),
+                        FlatButton(
+                          child: Icon(GardenPlannerIcons.next),
+                          color: Colors.green,
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               DailyWidget(
-                date: "Thursday",
+                date: "Thursday 10th",
                 tempHigh: "90°F",
-                tempLow: "90°F",
+                tempLow: "72°F",
                 rainPercentage: "56%",
                 weatherSentence: "Rain in the evening and overnight.",
-                phaseIcon: getMoonPhase("moon_full"),
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
+              ),
+              DailyWidget(
+                date: "Thursday 10th",
+                tempHigh: "90°F",
+                tempLow: "72°F",
+                rainPercentage: "56%",
+                weatherSentence: "Rain in the evening and overnight.",
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
+              ),
+              DailyWidget(
+                date: "Thursday 10th",
+                tempHigh: "90°F",
+                tempLow: "72°F",
+                rainPercentage: "56%",
+                weatherSentence: "Rain in the evening and overnight.",
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
+              ),
+              DailyWidget(
+                date: "Thursday 10th",
+                tempHigh: "90°F",
+                tempLow: "72°F",
+                rainPercentage: "56%",
+                weatherSentence: "Rain in the evening and overnight.",
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
+              ),
+              DailyWidget(
+                date: "Thursday 10th",
+                tempHigh: "90°F",
+                tempLow: "72°F",
+                rainPercentage: "56%",
+                weatherSentence: "Rain in the evening and overnight.",
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
+              ),
+              DailyWidget(
+                date: "Thursday 10th",
+                tempHigh: "90°F",
+                tempLow: "72°F",
+                rainPercentage: "56%",
+                weatherSentence: "Rain in the evening and overnight.",
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
+              ),
+              DailyWidget(
+                date: "Thursday 10th",
+                tempHigh: "90°F",
+                tempLow: "72°F",
+                rainPercentage: "56%",
+                weatherSentence: "Rain in the evening and overnight.",
+                phaseIcon: getMoonPhase("moon_waxing_gibbous"),
+                daysNotes:
+                    "These are the notes for the day. Plants plants plants, I love them. "
+                    "Trying to make this long enough to wrap around.",
               ),
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          tooltip: 'Increment',
-          onPressed: () {},
-          child: Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
   }

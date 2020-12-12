@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:garden_planner/daily_wiidget.dart';
 
+import 'daily_widget.dart';
 import 'garden_planner_icons_icons.dart';
 
 void main() {
@@ -49,8 +49,32 @@ class MyApp extends StatelessWidget {
         ),
         drawer: Drawer(
           child: ListView(
+            padding: EdgeInsets.zero,
             children: [
-              ListTile(),
+              DrawerHeader(
+                child: Text('Drawer Header'),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  "text",
+                ),
+                subtitle: Text(
+                  "text",
+                ),
+                trailing: Column(
+                  children: <Widget>[
+                    CircleAvatar(
+                      child: IconButton(
+                        icon: Icon(Icons.add),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               ListTile(),
               ListTile(),
               ListTile(),

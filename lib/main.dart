@@ -92,14 +92,13 @@ class MyApp extends StatelessWidget {
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       color: Colors.green,
-                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         FlatButton(
                           child: Icon(GardenPlannerIcons.previous),
-                          color: Colors.green,
                           onPressed: () {},
                         ),
                         Padding(
@@ -118,7 +117,6 @@ class MyApp extends StatelessWidget {
                         ),
                         FlatButton(
                           child: Icon(GardenPlannerIcons.next),
-                          color: Colors.green,
                           onPressed: () {},
                         ),
                       ],
